@@ -1,0 +1,4 @@
+yarn --emoji --ignore-scripts
+yarn format
+rimraf node_modules
+git add -A

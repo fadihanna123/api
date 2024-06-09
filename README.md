@@ -25,7 +25,7 @@ yarn
 ```sh
 # Start the server
 yarn dev
-# Go to http://localhost:3000
+# Go to http://localhost:5000
 ```
 
 ## Usage

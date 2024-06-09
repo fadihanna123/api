@@ -10,3 +10,9 @@ dist
 # Git
 .git
 .gitignore
+
+# Vscode
+.vscode
+
+# Readme
+README.md

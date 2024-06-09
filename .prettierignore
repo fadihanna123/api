@@ -1,4 +1,11 @@
-node_modules/*
+# Dependencies
+node_modules
+
+# Readme
 README.md
-AUTHORS
+
+# Yarn
 yarn.lock
+
+# Misc 
+AUTHORS

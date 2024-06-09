@@ -11,7 +11,7 @@
   },
   "author": {
     "name": "Fadi Hanna",
-    "email": "fadihanna230@gmail.com"
+    "email": "fhanna181@gmail.com"
   },
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register src/app",

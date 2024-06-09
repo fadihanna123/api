@@ -1,8 +1,21 @@
+import { Request } from 'express';
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
 
 type Routes = '/users' | '/users/add' | '/users/:id';
+
+namespace NodeJS {
+  /**
+   * ProcessEnv
+   * @param { number } PORT
+   * @param { 'development' | 'production' | 'test' } NODE_ENV
+   */
+  interface ProcessEnv {
+    PORT: number;
+    NODE_ENV: 'development' | 'production' | 'test';
+  }
+}
 
 interface User {
   id?: number;
@@ -11,4 +24,8 @@ interface User {
   work: string;
 }
 
-export { Routes, User };
+interface typedRequestBody<T> extends Request {
+  body: T;
+}
+
+export { Routes, User, typedRequestBody };

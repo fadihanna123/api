@@ -1,11 +1,25 @@
 import { users } from '@core/consts';
+import { User, typedRequestBody } from '@core/types';
 import { Request, Response } from 'express';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
 
-const updateUser = (req: Request, res: Response) => {
+/**
+ * Update a user based on id.
+ * @function updateUser
+ * @access Public
+ * @route PUT /users/:id
+ * @param { typedRequestBody<User> } req
+ * @param { Response } res
+ * @returns { Response<any, Record<string, any>> }
+ * @example updateUser();
+ */
+const updateUser = (
+  req: typedRequestBody<User>,
+  res: Response
+): Response<any, Record<string, any>> => {
   const { name, age, work } = req.body;
   console.log(req.body);
   const id = Number(req.params.id);

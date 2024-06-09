@@ -1,11 +1,26 @@
 import { users } from '@core/consts';
-import { Request, Response } from 'express';
+import { User } from '@core/types';
+import { Response } from 'express';
+import { typedRequestBody } from '@core/types';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
 
-const getUsers = (req: Request, res: Response) => {
+/**
+ * Get all users.
+ * @function getUsers
+ * @access Public
+ * @route GET /users/
+ * @param { typedRequestBody<User> } req
+ * @param { Response } res
+ * @returns { Response<any, Record<string, any>> }
+ * @example getUsers();
+ */
+const getUsers = (
+  req: typedRequestBody<User>,
+  res: Response
+): Response<any, Record<string, any>> => {
   return res.json(users);
 };
 

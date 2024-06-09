@@ -9,8 +9,8 @@ import { Request, Response } from 'express';
 const deleteUser = (req: Request, res: Response) => {
   const id = Number(req.params.id);
 
-  let foundUser = users.find((user: User) => user.id === id);
-  delete foundUser;
+  let foundId = users.findIndex((user: User) => user.id === id);
+  users.splice(foundId, 1);
   return res.json(users);
 };
 

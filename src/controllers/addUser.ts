@@ -1,5 +1,5 @@
-import { users } from '@core/consts';
 import { Request, Response } from 'express';
+import { users } from '@core/consts';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
@@ -7,7 +7,8 @@ import { Request, Response } from 'express';
 
 const addUser = (req: Request, res: Response) => {
   const { name, age, work } = req.body;
-  users.push({ name, age, work });
+  let id = Math.floor(Math.random() * 100);
+  users.push({ id, name, age, work });
   return res.json(users);
 };
 

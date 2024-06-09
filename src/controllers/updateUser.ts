@@ -7,10 +7,11 @@ import { Request, Response } from 'express';
 
 const updateUser = (req: Request, res: Response) => {
   const { name, age, work } = req.body;
+  console.log(req.body);
   const id = Number(req.params.id);
 
-  let foundUser = users.find((user) => user.id === id);
-  foundUser = { name, age, work };
+  let foundUser: number = users.findIndex((user) => user.id === id);
+  users[foundUser] = { id: id, name, age, work };
   return res.json(users);
 };
 

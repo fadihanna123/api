@@ -1,5 +1,5 @@
 import { User } from '@core/types';
-import { users } from 'consts';
+import { users } from '@core/consts';
 import { Request, Response } from 'express';
 
 /**

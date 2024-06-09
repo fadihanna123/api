@@ -1,10 +1,10 @@
 import express, { Application } from 'express';
-import { listenFn } from '@core/controllers';
-import { errorHandler, port, storeLog } from '@core/utils/';
+import helmet from 'helmet';
 import morgan from 'morgan';
+import { listenFn } from '@core/controllers';
+import { errorHandler, port } from '@core/utils';
 import routes from '@core/routes';
 import { logger } from '@core/tools';
-import helmet from 'helmet';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
@@ -14,8 +14,6 @@ const server: Application = express();
 
 server.use((req, res, next) => {
   logger.info(`${req.method}, ${req.url}`);
-
-  storeLog(`Method: ${req.method}, ${req.url}}`, req.method, req.url);
 
   next();
 });

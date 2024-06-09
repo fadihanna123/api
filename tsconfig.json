@@ -8,6 +8,7 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "moduleResolution": "NodeNext",
     "baseUrl": "src",
+    "rootDir": "src",
     "outDir": "dist",
     "sourceMap": true,
     "esModuleInterop": true,
@@ -15,7 +16,7 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "@core/*": ["./*"]
+      "@core/*": ["*"]
     }
   }
 }

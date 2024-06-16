@@ -1,0 +1,9 @@
+services:
+  api:
+    container_name: api
+    restart: unless-stopped
+    build: .
+    env_file:
+      - .env.production
+    ports:
+      - ${PROD_PORT}:${PROD_PORT}

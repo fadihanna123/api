@@ -4,6 +4,5 @@ RUN npm i --ignore-scripts -g nodemon ts-node-dev rimraf
 COPY package.json .
 RUN yarn --ignore-scripts
 COPY . .
-RUN yarn build
-EXPOSE ${PROD_PORT}
-CMD yarn start
+EXPOSE ${DEV_PORT}
+CMD yarn dev

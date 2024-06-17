@@ -1,9 +1,12 @@
 services:
   api:
     container_name: api
-    restart: unless-stopped
+    restart: always
     build: .
     env_file:
-      - .env.production
+      - .env
     ports:
-      - ${PROD_PORT}:${PROD_PORT}
+      - ${DEV_PORT}:${DEV_PORT}
+    volumes:
+      - ./src/:/app/src
+    command: yarn dev

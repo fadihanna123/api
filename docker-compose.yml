@@ -4,9 +4,9 @@ services:
     restart: always
     build: .
     env_file:
-      - .env
+      - .docker.env
     ports:
-      - ${DEV_PORT}:${DEV_PORT}
+      - 5000:5000
     volumes:
       - ./:/app
       - /app/node_modules

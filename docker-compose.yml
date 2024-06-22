@@ -8,5 +8,6 @@ services:
     ports:
       - ${DEV_PORT}:${DEV_PORT}
     volumes:
-      - ./src/:/app/src
+      - ./:/app
+      - /app/node_modules
     command: yarn dev

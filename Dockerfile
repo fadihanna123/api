@@ -1,10 +1,10 @@
 FROM node:20.15.0-alpine3.20
-RUN adduser -D -g '' fadi
 WORKDIR /app
+Run chown -R node:node /app
 RUN npm i --ignore-scripts -g nodemon ts-node-dev rimraf
 COPY yarn.lock package.json .
 RUN yarn install --silent --frozen-lockfile --ignore-scripts
 COPY . .
-USER fadi
 EXPOSE ${DEV_PORT}
+USER node
 CMD yarn dev

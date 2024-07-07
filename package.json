@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://localhost:5000",
   "license": "MIT",
   "private": "true",
@@ -17,7 +17,7 @@
     "dev": "ts-node-dev --poll -r tsconfig-paths/register src/app",
     "format": "prettier . -w",
     "setup": "yarn --emoji --ignore-scripts",
-    "clear": "rimraf node_modules dist",
+    "clear": "rm -rf node_modules dist",
     "prepare": "husky",
     "build": "tsc"
   },
@@ -33,7 +33,7 @@
     "morgan": "^1.10.0",
     "prettier": "^3.3.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   },
   "dependencies": {
     "express": "^4.19.2",

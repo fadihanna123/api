@@ -1,10 +1,8 @@
-FROM node:20.15.0-alpine3.20
+FROM node:20.14.0-alpine3.20
 WORKDIR /app
-Run chown -R node:node /app
-RUN npm i --silent --ignore-scripts -g nodemon ts-node-dev rimraf
-COPY yarn.lock package.json .
-RUN yarn install --silent --frozen-lockfile --ignore-scripts
+RUN npm i --silent --ignore-scripts -g ts-node-dev
+COPY yarn.lock package.json ./
+RUN yarn install --silent --ignore-scripts
 COPY . .
 EXPOSE ${DEV_PORT}
-USER node
 CMD yarn dev

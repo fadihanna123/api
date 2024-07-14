@@ -24,3 +24,6 @@ LICENSE
 # Docker
 Dockerfile
 .dockerignore
+
+# Scripts
+run.sh

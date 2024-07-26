@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { getUsers, addUser, updateUser, deleteUser } from '@core/controllers';
-import { Routes } from '@core/types';
+import { getUsers, addUser, updateUser, deleteUser } from '../controllers';
+import { Routes } from '../types';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>

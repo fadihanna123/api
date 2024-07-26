@@ -19,7 +19,8 @@
     "setup": "yarn --emoji --ignore-scripts",
     "clear": "rm -rf node_modules dist",
     "prepare": "husky",
-    "build": "tsc"
+    "build": "tsc",
+    "deploy": "yarn build && node dist/app"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",

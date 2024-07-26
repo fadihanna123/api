@@ -1,5 +1,5 @@
-import { users } from '@core/consts';
-import { User, typedRequestBody } from '@core/types';
+import { users } from '../consts';
+import { User, typedRequestBody } from '../types';
 import { Request, Response } from 'express';
 
 /**

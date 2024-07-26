@@ -3,10 +3,10 @@ import 'dotenv/config';
 import express, { Application } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { listenFn } from '@core/controllers';
-import { errorHandler, port } from '@core/utils';
-import routes from '@core/routes/';
-import { logger } from '@core/tools';
+import { listenFn } from './controllers';
+import { errorHandler, port } from './utils';
+import routes from './routes/';
+import { logger } from './tools';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 

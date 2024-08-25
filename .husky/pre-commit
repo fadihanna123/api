@@ -5,4 +5,3 @@ git pull
 npx yarn --silent --emoji --ignore-scripts
 npx yarn format
 npx rimraf node_modules
-git add -A

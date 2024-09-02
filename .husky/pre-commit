@@ -3,5 +3,6 @@ git fetch --all
 git fetch --prune
 git pull
 npx yarn --silent --emoji --ignore-scripts
+vitest run
 npx yarn format
 npx rimraf node_modules

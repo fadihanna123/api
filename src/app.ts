@@ -9,15 +9,12 @@ import routes from './routes/';
 import { logger } from './tools';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
 
-const server: Application = express();
+export const server: Application = express();
 
-// Use all routes.
-server.use(routes);
 const options = {
   definition: {
     openapi: '3.0.0',
@@ -61,9 +58,13 @@ server.use(express.json({ type: 'application/json', limit: '1kb' }));
 server.use(express.urlencoded({ extended: true }));
 // Add security to the server.
 server.use(helmet());
-// Handle errors.
-server.use(errorHandler);
 // Add Morgan logging mode for receiving requests.
 server.use(morgan('dev'));
+// Use all routes.
+server.use(routes);
+// Handle errors.
+server.use(errorHandler);
 
-server.listen(port, listenFn);
+if (process.env.NODE_ENV !== 'test') {
+  server.listen(port, listenFn);
+}

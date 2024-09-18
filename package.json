@@ -41,7 +41,7 @@
     "vitest": "^2.0.5"
   },
   "dependencies": {
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "helmet": "^7.1.0",
     "luxon": "^3.5.0",
     "node-cron": "^3.0.3",

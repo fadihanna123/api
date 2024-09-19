@@ -9,11 +9,15 @@ import routes from './routes/';
 import { logger } from './tools';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
+
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
 
 export const server: Application = express();
+
+// Use all routes.
+server.use(routes);
 
 const options = {
   definition: {
@@ -23,6 +27,10 @@ const options = {
       version: '0.1.0',
       description:
         'This is a simple Users API application made with Express and documented with Swagger',
+      license: {
+        name: 'MIT',
+        url: 'https://spdx.org/licenses/MIT.html',
+      },
       contact: {
         name: 'Fadi Hanna',
         email: 'fhanna181@gmail.com',
@@ -36,7 +44,7 @@ const options = {
       },
     ],
   },
-  apis: ['./routes/*.ts'],
+  apis: [`${__dirname}/routes/*.ts`],
 };
 
 const specs = swaggerJsdoc(options);
@@ -52,16 +60,12 @@ server.use((req, res, next) => {
   next();
 });
 
-// Parse JSON bodies (as send by API clients) and add 1 kb limit to sending json.
-server.use(express.json({ type: 'application/json', limit: '1kb' }));
 // Parse URL-encoded bodies (as sent by HTML forms)
 server.use(express.urlencoded({ extended: true }));
 // Add security to the server.
 server.use(helmet());
 // Add Morgan logging mode for receiving requests.
 server.use(morgan('dev'));
-// Use all routes.
-server.use(routes);
 // Handle errors.
 server.use(errorHandler);
 

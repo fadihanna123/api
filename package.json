@@ -19,9 +19,11 @@
     "setup": "yarn --emoji --ignore-scripts",
     "clear": "rm -rf node_modules dist",
     "prepare": "husky",
-    "build": "tsc",
+    "build": "esbuild src/app.ts --bundle --outdir=dist --minify --platform=node",
     "deploy": "yarn build && node dist/app",
-    "test": "vitest"
+    "test": "vitest",
+    "lint": "tsc --noEmit",
+    "ci": "yarn build && yarn test && yarn lint"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",

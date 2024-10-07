@@ -2,6 +2,6 @@ git fetch
 git fetch --all
 git fetch --prune
 git pull
-npx yarn --silent --emoji --ignore-scripts
-npx yarn format
-npx rimraf node_modules
+yarn setup
+yarn format
+yarn clear

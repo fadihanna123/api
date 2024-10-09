@@ -22,6 +22,7 @@ export const fileCleaner = (): void => {
         if (err) {
           throw err;
         }
+        console.log('Done cleaning');
       });
     })
     .catch((err) => {

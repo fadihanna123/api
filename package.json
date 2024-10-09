@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://localhost:5000",
   "license": "MIT",
   "private": "true",
@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "ts-node-dev --poll -r tsconfig-paths/register src/app",
     "format": "prettier . -w",
-    "setup": "yarn --emoji --ignore-scripts",
+    "setup": "yarn --emoji --ignore-scripts --immutable --silent",
     "clear": "rm -rf node_modules dist",
     "prepare": "husky",
     "build": "esbuild src/app.ts --bundle --outdir=dist --minify --platform=node",
@@ -39,17 +39,17 @@
     "prettier": "^3.3.3",
     "supertest": "^7.0.0",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.2"
   },
   "dependencies": {
-    "express": "^4.20.0",
+    "express": "^4.21.1",
     "helmet": "^8.0.0",
     "luxon": "^3.5.0",
     "node-cron": "^3.0.3",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
-    "winston": "^3.14.2"
+    "winston": "^3.15.0"
   },
   "engines": {
     "node": ">=16.0.0",

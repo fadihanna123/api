@@ -1,4 +1,4 @@
-import { users } from '../consts';
+import { users } from '../utils/consts';
 import { User, typedRequestBody } from '../types';
 import { Response } from 'express';
 

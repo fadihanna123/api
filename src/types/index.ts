@@ -1,4 +1,5 @@
 import { Request } from 'express';
+
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
@@ -28,4 +29,4 @@ interface typedRequestBody<T> extends Request {
   body: T;
 }
 
-export { Routes, User, typedRequestBody };
+export { User, typedRequestBody, Routes };

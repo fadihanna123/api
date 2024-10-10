@@ -1,5 +1,5 @@
 import { User, typedRequestBody } from '../types';
-import { users } from '../consts';
+import { users } from '../utils/consts';
 import { Response } from 'express';
 
 /**

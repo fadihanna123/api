@@ -1,14 +1,34 @@
-import { fileCleaner } from './fileClenaer';
+import fs from 'fs';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
 
 /**
- * Clean log and error data in the database and call fileCleaner.
+ * Clean log and error files.
  * @function logsRemover
- * @async
- * @returns { Promise<void> }
+ * @returns { void }
  * @example logsRemover();
  */
-export const logsRemover = async (): Promise<void> => fileCleaner();
+export const logsRemover = (): void => {
+  const logsPath: string = './src/logs/debug.log';
+  const errorPath: string = './src/logs/error.log';
+  const newValue: string = '';
+
+  fs.promises
+    .readFile(logsPath)
+    .then(() => {
+      fs.promises.writeFile(errorPath, newValue).catch((err: Error) => {
+        if (err) {
+          throw err;
+        }
+
+        console.log('Done cleaning');
+      });
+    })
+    .catch((err: Error) => {
+      if (err) {
+        throw err;
+      }
+    });
+};

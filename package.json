@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "homepage": "https://localhost:5000",
   "license": "MIT",
   "private": "true",
@@ -19,7 +19,7 @@
     "setup": "yarn --emoji --ignore-scripts --immutable --silent",
     "clear": "rm -rf node_modules dist",
     "prepare": "husky",
-    "build": "tsc --noEmit && sbuild src/app.ts --bundle --outdir=dist --minify --platform=node",
+    "build": "tsc --noEmit && esbuild src/app.ts --bundle --outdir=dist --minify --platform=node",
     "deploy": "yarn build && node dist/app",
     "test": "vitest",
     "lint": "tsc --noEmit",

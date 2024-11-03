@@ -1,4 +1,4 @@
-FROM node:20.18.0-alpine3.20
+FROM node:22.11.0-alpine3.20
 WORKDIR /app
 RUN npm i --silent --ignore-scripts -g ts-node-dev
 COPY yarn.lock package.json ./

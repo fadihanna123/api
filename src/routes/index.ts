@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getUsers, addUser, updateUser, deleteUser } from '../controllers';
+import { addUser, deleteUser, getUsers, updateUser } from '../controllers';
 import { Routes } from '../types';
 
 /**

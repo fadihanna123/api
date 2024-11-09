@@ -1,6 +1,6 @@
+import { Logger } from 'winston';
 import { logger } from '../tools';
 import { port } from '../utils';
-import { Logger } from 'winston';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>

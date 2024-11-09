@@ -3,12 +3,12 @@ import 'dotenv/config';
 import express, { Application } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { listenFn } from './controllers';
-import { errorHandler, port } from './utils';
-import routes from './routes/';
-import { logger } from './tools';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
+import { listenFn } from './controllers';
+import routes from './routes/';
+import { logger } from './tools';
+import { errorHandler, port } from './utils';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>

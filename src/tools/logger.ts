@@ -5,7 +5,7 @@ import winston, { format } from 'winston';
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
 
-const myFormat = format.printf(({ level, message, timestamp }) => {
+const myFormat = format.printf(({ level, message, timestamp }: any) => {
   timestamp = DateTime.fromJSDate(new Date(timestamp)).toFormat(
     'yyyy-MM-dd HH:mm'
   );

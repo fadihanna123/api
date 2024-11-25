@@ -1,4 +1,4 @@
-import { User } from '../types';
+import { User } from '@/types';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>

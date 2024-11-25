@@ -1,14 +1,14 @@
 import 'dotenv/config';
 
-import express, { Application } from 'express';
+import { listenFn } from '@/controllers';
+import routes from '@/routes/';
+import { logger } from '@/tools';
+import { errorHandler, port } from '@/utils';
+import express, { Application, json } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import { listenFn } from './controllers';
-import routes from './routes/';
-import { logger } from './tools';
-import { errorHandler, port } from './utils';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
@@ -16,6 +16,8 @@ import { errorHandler, port } from './utils';
 
 export const server: Application = express();
 
+// Parse JSON.
+server.use(json());
 // Use all routes.
 server.use(routes);
 

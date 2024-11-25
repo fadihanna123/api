@@ -1,6 +1,6 @@
+import { typedRequestBody, User } from '@/types';
+import { users } from '@utils/consts';
 import { Response } from 'express';
-import { typedRequestBody, User } from 'types';
-import { users } from '../utils/consts';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>

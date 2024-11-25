@@ -7,7 +7,7 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "CommonJS",
     "moduleResolution": "node",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "rootDir": "src",
     "outDir": "dist",
     "sourceMap": true,
@@ -16,6 +16,11 @@
     "strict": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@tests/*": ["src/tests/*"],
+      "@utils/*": ["src/utils/*"]
+    }
   }
 }

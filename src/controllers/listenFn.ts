@@ -1,5 +1,5 @@
+import { logger } from '@/tools';
 import { Logger } from 'winston';
-import { logger } from '../tools';
 import { port } from '../utils';
 
 /**

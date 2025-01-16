@@ -15,10 +15,11 @@
   },
   "scripts": {
     "dev": "ts-node-dev --poll -r tsconfig-paths/register src/app",
+    "start": "node build/app.js",
     "format": "prettier . -w",
     "setup": "yarn --emoji --ignore-scripts --immutable --silent",
     "prepare": "husky",
-    "build": "tsc --noEmit && esbuild src/app.ts --bundle --outdir=dist --minify --platform=node",
+    "build": "tsc --noEmit && esbuild src/app.ts --bundle --outdir=build --minify --platform=node",
     "preview": "yarn build && node dist/app",
     "test": "vitest",
     "lint": "tsc --noEmit",

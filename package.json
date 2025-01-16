@@ -24,7 +24,7 @@
     "test": "vitest",
     "lint": "tsc --noEmit",
     "ci": "yarn build && yarn lint && yarn test",
-    "clear": "rm -rf node_modules dist"
+    "clear": "rm -rf node_modules dist build"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",

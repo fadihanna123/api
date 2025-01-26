@@ -13,15 +13,11 @@ import { Response } from 'express';
  * @route POST /users/add
  * @param { typedRequestBody<IUsers> } req
  * @param { Response } res
- * @returns { Response<any, Record<string, any>> }
  * @example addUser();
  */
-const addUser = (
-  req: typedRequestBody<User>,
-  res: Response
-): Response<any, Record<string, any>> => {
+const addUser = (req: typedRequestBody<User>, res: Response) => {
   const { name, age, work } = req.body;
-  let id = Math.floor(Math.random() * 100);
+  const id = Math.floor(Math.random() * 100);
   users.push({ id, name, age, work });
   return res.json(users);
 };

@@ -13,13 +13,9 @@ import { Response } from 'express';
  * @route GET /users/
  * @param { typedRequestBody<User> } req
  * @param { Response } res
- * @returns { Response<any, Record<string, any>> }
  * @example getUsers();
  */
-const getUsers = (
-  req: typedRequestBody<User>,
-  res: Response
-): Response<any, Record<string, any>> => {
+const getUsers = (req: typedRequestBody<User>, res: Response) => {
   return res.json(users);
 };
 

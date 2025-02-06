@@ -15,4 +15,4 @@ fi
 
 # Continue running... 
 yarn --silent --emoji --ignore-scripts
-docker compose up --build
+yarn dev

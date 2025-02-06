@@ -16,6 +16,8 @@ import swaggerUi from 'swagger-ui-express';
 
 export const server: Application = express();
 
+// Add Morgan logging mode for receiving requests.
+server.use(morgan('dev'));
 // Parse JSON.
 server.use(json());
 // Use all routes.
@@ -66,8 +68,6 @@ server.use((req, res, next) => {
 server.use(express.urlencoded({ extended: true }));
 // Add security to the server.
 server.use(helmet());
-// Add Morgan logging mode for receiving requests.
-server.use(morgan('dev'));
 // Handle errors.
 server.use(errorHandler);
 

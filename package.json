@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "homepage": "https://localhost:5000",
   "license": "MIT",
   "private": "true",
@@ -22,7 +22,7 @@
     "build": "yarn type-check && esbuild src/app.ts --bundle --outdir=build --minify --platform=node",
     "preview": "yarn build && node dist/app",
     "test": "vitest",
-    "lint": "eslint && yarn type-check",
+    "lint": "eslint . && yarn type-check",
     "type-check": "tsc --noEmit",
     "ci": "yarn build && yarn lint && yarn test",
     "clear": "rimraf node_modules dist build"
@@ -38,7 +38,7 @@
     "@types/swagger-ui-express": "4.1.7",
     "dotenv": "16.4.7",
     "eslint": "9.20.1",
-    "globals": "15.15.0",
+    "globals": "16.0.0",
     "husky": "9.1.7",
     "morgan": "1.10.0",
     "prettier": "3.5.1",

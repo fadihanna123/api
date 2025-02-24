@@ -2,9 +2,6 @@
 
 > You can get, add, update, delete users using this API template.
 
-## [Demo](https://api-production-76af.up.railway.app/users)
-
-
 ## 🚀 Quick Start
 
 ```sh

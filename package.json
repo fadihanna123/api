@@ -14,18 +14,18 @@
     "email": "fhanna181@gmail.com"
   },
   "scripts": {
-    "dev": "ts-node-dev --poll -r tsconfig-paths/register src/app",
+    "dev": "ts-node-dev --poll -r tsconfig-paths/register ./src/app",
     "start": "node build/app.js",
-    "format": "prettier . -w",
+    "format": "prettier ./ -w",
     "setup": "yarn --emoji --ignore-scripts --immutable --silent",
     "prepare": "husky",
-    "build": "yarn type-check && esbuild src/app.ts --bundle --outdir=build --minify --platform=node",
-    "preview": "yarn build && node dist/app",
+    "build": "yarn type-check && esbuild ./src/app.ts --bundle --outdir=build --minify --platform=node",
+    "preview": "yarn build && node ./dist/app",
     "test": "vitest",
-    "lint": "eslint . && yarn type-check",
+    "lint": "eslint ./ && yarn type-check",
     "type-check": "tsc --noEmit",
     "ci": "yarn build && yarn lint && yarn test",
-    "clear": "rimraf node_modules dist build"
+    "clear": "rimraf ./node_modules ./dist ./build"
   },
   "devDependencies": {
     "@eslint/js": "9.21.0",
@@ -49,7 +49,7 @@
     "typescript": "5.7.3",
     "typescript-eslint": "8.25.0",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "3.0.6"
+    "vitest": "3.0.7"
   },
   "dependencies": {
     "express": "4.21.2",

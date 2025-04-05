@@ -52,7 +52,7 @@
     "vitest": "3.1.1"
   },
   "dependencies": {
-    "express": "4.17.2",
+    "express": "4.20.0",
     "helmet": "8.1.0",
     "luxon": "3.6.1",
     "node-cron": "3.0.3",

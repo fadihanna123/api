@@ -1,43 +1,86 @@
-# API Template
+# API
 
-> You can get, add, update, delete users using this API template.
+A modern, TypeScript-based REST API built with Express.js, featuring Swagger documentation, automated testing, and Docker support.
 
-## 🚀 Quick Start
+## Features
 
-```sh
-# Clone the project
+- 🚀 Built with Express.js and TypeScript
+- 📚 Swagger/OpenAPI documentation
+- 🛡️ Security features with Helmet
+- 📝 Logging with Winston
+- ⏰ Scheduled tasks with node-cron
+- 📅 Date handling with Luxon
+- 🐳 Docker support
+- 🧪 Testing with Vitest
+- ✨ Code formatting with Prettier
+- 🔍 Linting with ESLint
+- 🐶 Git hooks with Husky
+
+## Prerequisites
+
+- Node.js >= 16.0.0
+- Yarn (recommended) or npm
+- Docker (optional)
+
+## Installation
+
+1. Clone the repository:
+```bash
 git clone https://github.com/fadihanna123/api.git
-```
-
-```sh
-# Go to the directory
 cd api
 ```
 
-```sh
-# Install dependencies
-yarn
+2. Install dependencies:
+```bash
+yarn install
 ```
 
-```sh
-# Start the server
+## Development
+
+Start the development server:
+```bash
 yarn dev
-# Go to http://localhost:5000
 ```
 
-## Usage
+The API will be available at `https://localhost:5000`
 
-You can test API CRUD operations using Postman.
+## Available Scripts
 
+- `yarn dev` - Start development server
+- `yarn start` - Start production server
+- `yarn build` - Build the application
+- `yarn test` - Run tests
+- `yarn lint` - Run linter
+- `yarn format` - Format code
+- `yarn type-check` - Type checking
+- `yarn ci` - Run CI checks (build, lint, test)
 
-## 🤝 Contributing
+## Docker Support
 
-1 - Clone the project. <br />
-2 - Fork the project. <br />
-3 - Create your own branch: ```
-git checkout -b <your branchname>``` <br />
-4 - Push changes. <br />
-5 - Create a pull request. <br />
+Build and run with Docker:
+```bash
+docker-compose up
+```
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fadihanna123/api/issues).
+## API Documentation
 
+Once the server is running, access the Swagger documentation at:
+```
+https://localhost:5000/api-docs
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+- **Fadi Hanna** - [GitHub](https://github.com/fadihanna123)

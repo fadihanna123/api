@@ -2,7 +2,7 @@ import { DateTime } from 'luxon';
 import winston, { format } from 'winston';
 
 /**
- * @author Fadi Hanna<fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 const myFormat = format.printf(({ level, message, timestamp }: any) => {

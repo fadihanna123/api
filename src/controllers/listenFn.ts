@@ -3,7 +3,7 @@ import { Logger } from 'winston';
 import { port } from '../utils';
 
 /**
- * @author Fadi Hanna<fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 /**

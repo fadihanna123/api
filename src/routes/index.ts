@@ -3,7 +3,7 @@ import { Routes } from '@/types';
 import { Router } from 'express';
 
 /**
- * @author Fadi Hanna<fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 /**

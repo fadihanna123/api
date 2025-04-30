@@ -1,7 +1,7 @@
 import { Request } from 'express';
 
 /**
- * @author Fadi Hanna<fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 type Routes = '/users' | '/users/add' | '/users/:id';

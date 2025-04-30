@@ -1,6 +1,6 @@
 import { User } from '@/types';
 /**
- * @author Fadi Hanna<fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 const users: User[] = [];

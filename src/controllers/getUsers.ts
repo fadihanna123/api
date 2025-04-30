@@ -3,7 +3,7 @@ import { users } from '@utils/consts';
 import { Response } from 'express';
 
 /**
- * @author Fadi Hanna<fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 /**

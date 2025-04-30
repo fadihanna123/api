@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 /**
- * @author Fadi Hanna<fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 const { DEV_PORT } = process.env;

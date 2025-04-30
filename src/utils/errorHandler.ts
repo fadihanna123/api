@@ -2,7 +2,7 @@
 import { logger } from '@/tools';
 
 /**
- * @author Fadi Hanna<fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 /**

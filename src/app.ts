@@ -11,7 +11,7 @@ import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 
 /**
- * @author Fadi Hanna<fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 export const server: Application = express();
@@ -37,7 +37,6 @@ const options = {
       },
       contact: {
         name: 'Fadi Hanna',
-        email: 'fhanna181@gmail.com',
       },
     },
     version: '1.0.0',

@@ -16,12 +16,12 @@ import { Response } from 'express';
  * @example updateUser();
  */
 const updateUser = (req: typedRequestBody<User>, res: Response) => {
-  const { name, age, work } = req.body;
-  console.log(req.body);
+  const { ...updateData } = req.body;
+
   const id = Number(req.params.id);
 
   const foundUser: number = users.findIndex((user) => user.id === id);
-  users[foundUser] = { id: id, name, age, work };
+  users[foundUser] = updateData;
   return res.json(users);
 };
 

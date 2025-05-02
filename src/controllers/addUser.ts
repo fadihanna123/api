@@ -16,9 +16,10 @@ import { Response } from 'express';
  * @example addUser();
  */
 const addUser = (req: typedRequestBody<User>, res: Response) => {
-  const { name, age, work } = req.body;
+  const { ...addData } = req.body;
+
   const id = Math.floor(Math.random() * 100);
-  users.push({ id, name, age, work });
+  users.push({ id, ...addData });
   return res.json(users);
 };
 

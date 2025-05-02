@@ -21,7 +21,7 @@ server.use(morgan('dev'));
 // Parse JSON.
 server.use(json());
 // Use all routes.
-server.use(routes);
+server.use('/api', routes);
 
 const options = {
   definition: {

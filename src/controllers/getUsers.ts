@@ -16,7 +16,7 @@ import { Response } from 'express';
  * @example getUsers();
  */
 const getUsers = (req: typedRequestBody<User>, res: Response) => {
-  return res.json(users);
+  res.json(users);
 };
 
 export { getUsers };

@@ -53,8 +53,8 @@ const options = {
 const specs = swaggerJsdoc(options);
 server.use(
   '/api-docs',
-  swaggerUi.serve,
-  swaggerUi.setup(specs, { explorer: true })
+  swaggerUi.serve as any,
+  swaggerUi.setup(specs, { explorer: true }) as any
 );
 
 server.use((req, res, next) => {

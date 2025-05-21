@@ -20,7 +20,7 @@ const addUser = (req: typedRequestBody<User>, res: Response) => {
 
   const id = Math.floor(Math.random() * 100);
   users.push({ id, ...addData });
-  return res.json(users);
+  res.json(users);
 };
 
 export { addUser };

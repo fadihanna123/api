@@ -22,7 +22,7 @@ const updateUser = (req: typedRequestBody<User>, res: Response) => {
 
   const foundUser: number = users.findIndex((user) => user.id === id);
   users[foundUser] = updateData;
-  return res.json(users);
+  res.json(users);
 };
 
 export { updateUser };

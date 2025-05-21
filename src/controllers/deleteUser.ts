@@ -19,7 +19,7 @@ const deleteUser = (req: typedRequestBody<User>, res: Response) => {
   const id = Number(req.params.id);
   const foundId = users.findIndex((user: User) => user.id === id);
   users.splice(foundId, 1);
-  return res.json(users);
+  res.json(users);
 };
 
 export { deleteUser };

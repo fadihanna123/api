@@ -1,8 +1,8 @@
 {
   "name": "api",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "homepage": "https://localhost:5000",
-  "lastUpgrade": "20250430",
+  "lastUpgrade": "20250431",
   "license": "MIT",
   "private": "true",
   "bugs": "https://github.com/fadihanna123/api/issues",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "9.27.0",
-    "@types/express": "4.17.21",
+    "@types/express": "5.0.2",
     "@types/luxon": "3.6.2",
     "@types/morgan": "1.9.9",
     "@types/node-cron": "3.0.11",
@@ -47,15 +47,15 @@
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.32.0",
+    "typescript-eslint": "8.32.1",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "3.1.2"
+    "vitest": "3.1.4"
   },
   "dependencies": {
-    "express": "4.20.0",
+    "express": "5.1.0",
     "helmet": "8.1.0",
     "luxon": "3.6.1",
-    "node-cron": "4.0.5",
+    "node-cron": "4.0.6",
     "swagger-jsdoc": "6.2.8",
     "swagger-ui-express": "5.0.1",
     "winston": "3.17.0"

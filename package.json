@@ -1,8 +1,8 @@
 {
   "name": "api",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "homepage": "https://localhost:5000",
-  "lastUpgrade": "20250431",
+  "lastUpgrade": "20250607",
   "license": "MIT",
   "private": "true",
   "bugs": "https://github.com/fadihanna123/api/issues",
@@ -28,17 +28,17 @@
     "clear": "rimraf ./node_modules ./dist ./build"
   },
   "devDependencies": {
-    "@eslint/js": "9.27.0",
-    "@types/express": "5.0.2",
+    "@eslint/js": "9.28.0",
+    "@types/express": "5.0.3",
     "@types/luxon": "3.6.2",
-    "@types/morgan": "1.9.9",
+    "@types/morgan": "1.9.10",
     "@types/node-cron": "3.0.11",
     "@types/supertest": "6.0.3",
     "@types/swagger-jsdoc": "6.0.4",
     "@types/swagger-ui-express": "4.1.8",
     "dotenv": "16.5.0",
-    "eslint": "9.27.0",
-    "globals": "16.1.0",
+    "eslint": "9.28.0",
+    "globals": "16.2.0",
     "husky": "9.1.7",
     "morgan": "1.10.0",
     "prettier": "3.5.3",
@@ -47,15 +47,15 @@
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.32.1",
+    "typescript-eslint": "8.33.1",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "3.1.4"
+    "vitest": "3.2.2"
   },
   "dependencies": {
     "express": "5.1.0",
     "helmet": "8.1.0",
     "luxon": "3.6.1",
-    "node-cron": "4.0.6",
+    "node-cron": "4.1.0",
     "swagger-jsdoc": "6.2.8",
     "swagger-ui-express": "5.0.1",
     "winston": "3.17.0"

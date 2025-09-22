@@ -70,6 +70,5 @@ server.use(helmet());
 // Handle errors.
 server.use(errorHandler);
 
-if (process.env.NODE_ENV !== 'test') {
-  server.listen(port, listenFn);
-}
+server.listen(port, listenFn);
+

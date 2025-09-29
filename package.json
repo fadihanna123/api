@@ -19,7 +19,7 @@
     "format": "prettier ./ -w",
     "setup": "yarn --emoji --ignore-scripts --immutable --silent",
     "prepare": "husky",
-    "build": "yarn type-check && esbuild ./src/app.ts --bundle --outdir=build --minify --platform=node",
+    "build": "yarn type-check && tsc --outDir ./build && tsc-alias",
     "preview": "yarn build && node ./dist/app",
     "test": "vitest",
     "lint": "eslint ./ && yarn type-check",
@@ -58,6 +58,7 @@
     "node-cron": "4.1.0",
     "swagger-jsdoc": "6.2.8",
     "swagger-ui-express": "5.0.1",
+    "tsc-alias": "^1.8.16",
     "winston": "3.17.0"
   },
   "engines": {

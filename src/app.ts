@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 import { listenFn } from '@/controllers';
-import routes from '@/routes/';
+import routes from '@/api';
 import { logger } from '@/tools';
 import { errorHandler, port } from '@/utils';
 import express, { Application, json } from 'express';
@@ -71,4 +71,3 @@ server.use(helmet());
 server.use(errorHandler);
 
 server.listen(port, listenFn);
-

@@ -3,7 +3,7 @@
 A modern, TypeScript-based REST API built with Express.js, featuring Swagger documentation, automated testing, and Docker support.
 
 # Demo
-[Click](https://api-lqzfm.sevalla.app/api/users)
+[API](https://api-lqzfm.sevalla.app/api/users)
 
 ## Features
 

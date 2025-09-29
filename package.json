@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev --poll -r tsconfig-paths/register ./src/app",
-    "start": "node build/app.js",
+    "start": "nodemon build/app.js",
     "format": "prettier ./ -w",
     "setup": "yarn --emoji --ignore-scripts --immutable --silent",
     "prepare": "husky",
@@ -56,6 +56,7 @@
     "helmet": "8.1.0",
     "luxon": "3.7.1",
     "node-cron": "4.1.0",
+    "nodemon": "^3.1.10",
     "swagger-jsdoc": "6.2.8",
     "swagger-ui-express": "5.0.1",
     "tsc-alias": "^1.8.16",
@@ -66,3 +67,4 @@
     "npm": "Please use Yarn instead of NPM to install dependencies"
   }
 }
+

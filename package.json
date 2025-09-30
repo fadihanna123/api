@@ -1,8 +1,8 @@
 {
   "name": "api",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "homepage": "https://localhost:5000",
-  "lastUpgrade": "20250607",
+  "lastUpgrade": "20250930",
   "license": "MIT",
   "private": "true",
   "bugs": "https://github.com/fadihanna123/api/issues",
@@ -28,7 +28,7 @@
     "clear": "rimraf ./node_modules ./dist ./build"
   },
   "devDependencies": {
-    "@eslint/js": "9.28.0",
+    "@eslint/js": "9.36.0",
     "@types/express": "5.0.3",
     "@types/luxon": "3.7.1",
     "@types/morgan": "1.9.10",
@@ -36,35 +36,34 @@
     "@types/supertest": "6.0.3",
     "@types/swagger-jsdoc": "6.0.4",
     "@types/swagger-ui-express": "4.1.8",
-    "dotenv": "17.2.1",
-    "eslint": "9.33.0",
-    "globals": "16.2.0",
+    "dotenv": "17.2.3",
+    "eslint": "9.36.0",
+    "globals": "16.4.0",
     "husky": "9.1.7",
-    "morgan": "1.10.0",
+    "morgan": "1.10.1",
     "prettier": "3.6.2",
     "rimraf": "^6.0.1",
     "supertest": "7.1.4",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "4.2.0",
-    "typescript": "5.8.3",
-    "typescript-eslint": "8.33.1",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.45.0",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "3.2.2"
+    "vitest": "3.2.4"
   },
   "dependencies": {
     "express": "5.1.0",
     "helmet": "8.1.0",
-    "luxon": "3.7.1",
-    "node-cron": "4.1.0",
+    "luxon": "3.7.2",
+    "node-cron": "4.2.1",
     "nodemon": "^3.1.10",
     "swagger-jsdoc": "6.2.8",
     "swagger-ui-express": "5.0.1",
     "tsc-alias": "^1.8.16",
-    "winston": "3.17.0"
+    "winston": "3.18.2"
   },
   "engines": {
     "node": ">=16.0.0",
     "npm": "Please use Yarn instead of NPM to install dependencies"
   }
 }
-

@@ -60,7 +60,7 @@
     "swagger-jsdoc": "6.2.8",
     "swagger-ui-express": "5.0.1",
     "tsc-alias": "^1.8.16",
-    "winston": "3.18.2"
+    "winston": "3.18.3"
   },
   "engines": {
     "node": ">=16.0.0",

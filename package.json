@@ -1,8 +1,8 @@
 {
   "name": "api",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "homepage": "https://localhost:5000",
-  "lastUpgrade": "20250930",
+  "lastUpgrade": "20251015",
   "license": "MIT",
   "private": "true",
   "bugs": "https://github.com/fadihanna123/api/issues",
@@ -28,7 +28,7 @@
     "clear": "rimraf ./node_modules ./dist ./build"
   },
   "devDependencies": {
-    "@eslint/js": "9.36.0",
+    "@eslint/js": "9.37.0",
     "@types/express": "5.0.3",
     "@types/luxon": "3.7.1",
     "@types/morgan": "1.9.10",
@@ -37,7 +37,7 @@
     "@types/swagger-jsdoc": "6.0.4",
     "@types/swagger-ui-express": "4.1.8",
     "dotenv": "17.2.3",
-    "eslint": "9.36.0",
+    "eslint": "9.37.0",
     "globals": "16.4.0",
     "husky": "9.1.7",
     "morgan": "1.10.1",
@@ -47,7 +47,7 @@
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.45.0",
+    "typescript-eslint": "8.46.1",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.2.4"
   },

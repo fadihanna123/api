@@ -1,8 +1,8 @@
 {
   "name": "api",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "homepage": "https://localhost:5000",
-  "lastUpgrade": "20251021",
+  "lastUpgrade": "20251026",
   "license": "MIT",
   "private": "true",
   "bugs": "https://github.com/fadihanna123/api/issues",
@@ -25,11 +25,12 @@
     "lint": "eslint && yarn type-check",
     "type-check": "tsc --noEmit",
     "ci": "yarn build && yarn lint && yarn test",
+    "archive": "yarn pack --filename api-v${npm_package_version}.zip",
     "clear": "rimraf ./node_modules ./dist ./build"
   },
   "devDependencies": {
     "@eslint/js": "9.38.0",
-    "@types/express": "5.0.3",
+    "@types/express": "5.0.4",
     "@types/luxon": "3.7.1",
     "@types/morgan": "1.9.10",
     "@types/node-cron": "3.0.11",
@@ -49,7 +50,7 @@
     "typescript": "5.9.3",
     "typescript-eslint": "8.46.2",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "3.2.4"
+    "vitest": "4.0.3"
   },
   "dependencies": {
     "express": "5.1.0",

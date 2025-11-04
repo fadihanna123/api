@@ -1,4 +1,4 @@
-import { typedRequestBody, User } from '@/types';
+import { typedRequestBody, User } from '@core/types';
 import { users } from '@utils/consts';
 import { Response } from 'express';
 
@@ -18,9 +18,13 @@ import { Response } from 'express';
 const addUser = (req: typedRequestBody<User>, res: Response) => {
   const { ...addData } = req.body;
 
-  const id = Math.floor(Math.random() * 100);
-  users.push({ id, ...addData });
-  res.json(users);
+  if (!addData.name || typeof addData.age !== 'number' || !addData.work) {
+    res.status(400).json({ error: 'Invalid payload' });
+  }
+
+  const user = { id: Math.floor(Math.random() * 100), ...addData };
+  users.push(user);
+  res.status(201).json(users);
 };
 
 export { addUser };

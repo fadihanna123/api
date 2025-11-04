@@ -1,5 +1,5 @@
-import { addUser, deleteUser, getUsers, updateUser } from '@/controllers';
-import { Routes } from '@/types';
+import { addUser, deleteUser, getUsers, updateUser } from '@core/controllers';
+import { Routes } from '@core/types';
 import { Router } from 'express';
 
 /**

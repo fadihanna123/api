@@ -16,10 +16,16 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "types": ["node"],
+    "typeRoots": ["./node_modules/@types", "./src/types"],
     "paths": {
-      "@/*": ["src/*"],
-      "@tests/*": ["src/tests/*"],
-      "@utils/*": ["src/utils/*"]
+      "@core/*": ["./src/*"],
+      "@controllers/*": ["./src/controllers/*"],
+      "@logs/*": ["./src/logs/*"],
+      "@tasks/*": ["./src/tasks/*"],
+      "@tools/*": ["./src/tools/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@types/*": ["./src/types/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   }
 }

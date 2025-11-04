@@ -1,4 +1,4 @@
-import { User, typedRequestBody } from '@/types';
+import { User, typedRequestBody } from '@core/types';
 import { users } from '@utils/consts';
 import { Response } from 'express';
 
@@ -21,8 +21,12 @@ const updateUser = (req: typedRequestBody<User>, res: Response) => {
   const id = Number(req.params.id);
 
   const foundUser: number = users.findIndex((user) => user.id === id);
+  if (foundUser === -1) {
+    res.status(404).json({ error: 'User not found' });
+  }
+
   users[foundUser] = updateData;
-  res.json(users);
+  res.status(200).json(users);
 };
 
 export { updateUser };

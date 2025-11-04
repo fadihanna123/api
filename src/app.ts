@@ -1,14 +1,22 @@
 import 'dotenv/config';
 
-import { listenFn } from '@/controllers';
-import routes from '@/api';
-import { logger } from '@/tools';
-import { errorHandler, port } from '@/utils';
-import express, { Application, json } from 'express';
+import { listenFn } from '@core/controllers';
+import routes from '@core/routes';
+import { logger } from '@core/tools';
+import {
+  errorHandler,
+  isCors,
+  port,
+  serverEnv,
+  allowedDomains,
+} from '@core/utils';
+import express, { Request, Response, Application, json } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
+import cors, { CorsOptions } from 'cors';
+import { rateLimit } from 'express-rate-limit';
 
 /**
  * @author Fadi Hanna
@@ -16,12 +24,33 @@ import swaggerUi from 'swagger-ui-express';
 
 export const server: Application = express();
 
-// Add Morgan logging mode for receiving requests.
+const corsOptions: CorsOptions = {
+  origin: (origin, callback) => {
+    if (allowedDomains?.split(', ')?.indexOf(origin as string) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
+const limiter = {
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  limit: 100,
+};
+
+// Cors
+if (isCors) {
+  server.use(cors(corsOptions));
+}
+
+// Restrict counts of requests.
+server.use(rateLimit(limiter));
+
+// Add Morgan logging mode for receiving requests
 server.use(morgan('dev'));
-// Parse JSON.
-server.use(json());
-// Use all routes.
-server.use('/api', routes);
+// Parse JSON
+server.use(json({ type: 'application/json', limit: '1kb' }));
 
 const options = {
   definition: {
@@ -42,7 +71,7 @@ const options = {
     version: '1.0.0',
     servers: [
       {
-        api: 'http://localhost:5000/',
+        url: 'http://localhost:5000/',
         description: 'Local server',
       },
     ],
@@ -58,16 +87,26 @@ server.use(
 );
 
 server.use((req, res, next) => {
-  logger.info(`${req.method}, ${req.url}`);
+  logger.info({ method: req.method, url: req.originalUrl });
 
   next();
 });
 
 // Parse URL-encoded bodies (as sent by HTML forms)
 server.use(express.urlencoded({ extended: true }));
-// Add security to the server.
+// Add security to the server
+server.disable('x-powered-by');
 server.use(helmet());
-// Handle errors.
+// Use all routes
+server.use('/api/', routes);
+// Add a 404 handler before the error handler
+server.use((req: Request, res: Response) => {
+  res.status(404).json({ error: 'Not Found' });
+});
+
+// Handle errors
 server.use(errorHandler);
 
-server.listen(port, listenFn);
+if (serverEnv !== 'test') {
+  server.listen(port, listenFn);
+}

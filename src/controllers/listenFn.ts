@@ -1,4 +1,4 @@
-import { logger } from '@/tools';
+import { logger } from '@core/tools';
 import { Logger } from 'winston';
 import { port } from '../utils';
 

@@ -1,4 +1,4 @@
-import { User, typedRequestBody } from '@/types';
+import { User, typedRequestBody } from '@core/types';
 import { users } from '@utils/consts';
 import { Response } from 'express';
 
@@ -16,7 +16,7 @@ import { Response } from 'express';
  * @example getUsers();
  */
 const getUsers = (req: typedRequestBody<User>, res: Response) => {
-  res.json(users);
+  res.status(200).json(users);
 };
 
 export { getUsers };

@@ -1,4 +1,4 @@
-FROM node:22.21.0-alpine
+FROM node:24.11.1-alpine
 WORKDIR /app
 RUN npm install -g ts-node-dev yarn --force
 COPY yarn.lock package.json ./

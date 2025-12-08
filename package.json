@@ -1,8 +1,8 @@
 {
   "name": "api",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "homepage": "https://localhost:5000",
-  "lastUpgrade": "20251031",
+  "lastUpgrade": "20251208",
   "license": "MIT",
   "private": "true",
   "bugs": "https://github.com/fadihanna123/api/issues",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@eslint/js": "9.39.1",
     "@types/cors": "^2.8.19",
-    "@types/express": "5.0.5",
+    "@types/express": "5.0.6",
     "@types/luxon": "3.7.1",
     "@types/morgan": "1.9.10",
     "@types/node-cron": "3.0.11",
@@ -43,18 +43,18 @@
     "globals": "16.5.0",
     "husky": "9.1.7",
     "morgan": "1.10.1",
-    "prettier": "3.6.2",
-    "rimraf": "^6.1.0",
+    "prettier": "3.7.4",
+    "rimraf": "^6.1.2",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.3",
+    "typescript-eslint": "8.49.0",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "4.0.6"
+    "vitest": "4.0.15"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "5.2.0",
+    "express": "5.2.1",
     "express-rate-limit": "^8.2.1",
     "helmet": "8.1.0",
     "luxon": "3.7.2",
@@ -62,8 +62,8 @@
     "swagger-jsdoc": "6.2.8",
     "swagger-ui-express": "5.0.1",
     "tsc-alias": "1.8.16",
-    "winston": "3.18.3",
-    "zod": "^4.1.12"
+    "winston": "3.19.0",
+    "zod": "4.1.13"
   },
   "engines": {
     "node": ">=16.0.0",

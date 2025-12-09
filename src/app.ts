@@ -86,12 +86,6 @@ server.use(
   swaggerUi.setup(specs, { explorer: true }) as any
 );
 
-server.use((req, res, next) => {
-  logger.info({ method: req.method, url: req.originalUrl });
-
-  next();
-});
-
 // Parse URL-encoded bodies (as sent by HTML forms)
 server.use(express.urlencoded({ extended: true }));
 // Add security to the server

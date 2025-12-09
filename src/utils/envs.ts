@@ -13,6 +13,7 @@ const Env = z.object({
   USE_CORS: z.string().optional(),
   ALLOWEDOMAINS: z.string().optional(),
 });
+
 const env = Env.parse(process.env);
 
 const port = env.NODE_ENV === 'development' ? env.DEV_PORT : env.PROD_PORT;

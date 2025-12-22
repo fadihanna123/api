@@ -2,7 +2,6 @@ import 'dotenv/config';
 
 import { listenFn } from '@core/controllers';
 import routes from '@core/routes';
-import { logger } from '@core/tools';
 import {
   errorHandler,
   isCors,
@@ -104,3 +103,4 @@ server.use(errorHandler);
 if (serverEnv !== 'test') {
   server.listen(port, listenFn);
 }
+

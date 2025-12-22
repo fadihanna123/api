@@ -16,7 +16,7 @@
     {
       "label": "Install Dependencies",
       "type": "shell",
-      "command": "yarn --emoji --ignore-scripts",
+      "command": "yarn --emoji --silent --immutable --ignore-scripts --production",
       "runOptions": {
         "runOn": "folderOpen"
       },

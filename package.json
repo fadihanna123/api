@@ -62,7 +62,7 @@
     "swagger-ui-express": "5.0.1",
     "tsc-alias": "1.8.16",
     "winston": "3.19.0",
-    "zod": "4.2.1"
+    "zod": "4.3.4"
   },
   "engines": {
     "node": ">=16.0.0",
